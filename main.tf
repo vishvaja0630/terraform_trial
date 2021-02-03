@@ -16,7 +16,9 @@ provider "docker" {
 # Find the latest Ubuntu precise image.
 resource "docker_image" "tomcat" {
   name = "tomcat:latest"
-  build = "dockerfile"
+  build {
+      dockerfile = "default Dockerfile"
+   }
 }
 
 
