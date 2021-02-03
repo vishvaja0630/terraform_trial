@@ -12,8 +12,9 @@ stages{
      stage('Build Docker Image'){
      steps{
        script{
-			 dockerImage = docker.build("tomcat:latest")
+	       dockerImage = docker.build("tomcat:latest")
        }
+      }
       }
       stage('Terraform Init'){
          steps{
