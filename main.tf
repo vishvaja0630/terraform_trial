@@ -7,6 +7,7 @@ terraform{
       version = "2.8.0"
     }
   }
+ }
 
 # Configure the docker provider
 provider "docker" {
@@ -20,5 +21,4 @@ resource "docker_container" "tomcat" {
     internal = 8080
     external = 9090
   }
-}
 }
