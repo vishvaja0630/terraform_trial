@@ -1,7 +1,15 @@
-provider "docker"{
-   host = "ssh://devopsuser@devopsteamgoa.westindia.cloudapp.azure.com:22"
+required_providers {
+    # We recommend pinning to the specific version of the Docker Provider you're using
+    # since new versions are released frequently
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "2.8.0"
+    }
   }
 
+# Configure the docker provider
+provider "docker" {
+}
 
 resource "docker_container" "tomcat" {
   image = "tomcat:latest"
