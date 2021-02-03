@@ -1,4 +1,5 @@
-required_providers {
+terraform{
+    required_providers {
     # We recommend pinning to the specific version of the Docker Provider you're using
     # since new versions are released frequently
     docker = {
@@ -19,4 +20,5 @@ resource "docker_container" "tomcat" {
     internal = 8080
     external = 9090
   }
+}
 }
