@@ -18,7 +18,6 @@ resource "docker_image" "tomcat" {
   name = "tomcat:latest"
   build {
       path = "Dockerfile"
-      dockerfile = "default Dockerfile"
    }
 }
 
