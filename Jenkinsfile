@@ -6,8 +6,14 @@ tools {
 stages{
       stage('Git SCM'){
          steps{
-         git ''
+         git 'https://github.com/vishvaja0630/terraform_trial.git'
          }
+      }
+     stage('Build Docker Image'){
+     steps{
+       script{
+			 dockerImage = docker.build("tomcat:latest")
+       }
       }
       stage('Terraform Init'){
          steps{
