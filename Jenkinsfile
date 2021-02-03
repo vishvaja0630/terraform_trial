@@ -6,7 +6,7 @@ tools {
 stages{
       stage('Git SCM'){
          steps{
-         git 'https://github.com/vishvaja0630/terraform_trial.git'
+         git branch: 'main', url: 'https://github.com/vishvaja0630/terraform_trial.git'
          }
       }
      stage('Build Docker Image'){
