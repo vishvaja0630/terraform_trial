@@ -13,15 +13,6 @@ terraform{
 provider "docker" {
 }
 
-# Find the latest Ubuntu precise image.
-resource "docker_image" "tomcat" {
-  name = "tomcat:latest"
-  build {
-      path = ""
-      dockerfile = "default Dockerfile"
-   }
-}
-
 
 resource "docker_container" "tomcat" {
   image = "tomcat:latest"
